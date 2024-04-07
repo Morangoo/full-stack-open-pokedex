@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-node@v4
       - uses: superfly/flyctl-actions/setup-flyctl@master
         with:
-          version: '20'
+          node-version: '20'
       - name: Install dependencias
         run: npm install
       - name: Check style
