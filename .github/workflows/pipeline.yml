@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-node@v4
       - uses: superfly/flyctl-actions/setup-flyctl@master
         with:
-          node-version: '20'
+          version: '20'
       - name: Install dependencias
         run: npm install
       - name: Check style
@@ -63,4 +63,4 @@ jobs:
           severity: info
           text: A new version of pokedex deployed https://full-stack-open-pokedex-cicd-2024.fly.dev
           details: Healthcheck successful 
-          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}s
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
