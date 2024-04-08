@@ -1,9 +1,8 @@
 name: Healthcheck Pipeline
 
 on:
-  push:
-    branches:
-      - main
+  schedule:
+    - cron: '0 23 * * *'
 
 jobs:
   health_check:
@@ -12,7 +11,7 @@ jobs:
       - name: Check server status
         uses: jtalk/url-health-check-action@v4
         with:
-          url: https://full-stack-open-pokedex-cicd-204.fly.dev/version
+          url: https://full-stack-open-pokedex-cicd-2024.fly.dev/version
           max-attempts: 3
           retry-delay: 5s
 
